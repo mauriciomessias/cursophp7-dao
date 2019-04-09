@@ -1,20 +1,18 @@
 <?php
 
-	// Chama PHP de configurações
-	echo "***** CHAMA CONFIG.PHP *****<BR><BR>";
+	// Para atualizar no GIT:
+	//      git add --all
+	//      git commit -m "?????"
+	//      git push origin master
+
+	// (1) Chama PHP de configurações
 	require_once("config.php");
 
-	// Instancia SQL
-	echo "***** INSTANCIA SQL *****<BR><BR>";
-	$sql = new Sql();
+	// Instancia Usuario
+	$root = new Usuario();
 
-	// Seleciona usuários
-	echo "***** SELECIONA USUÁRIOS *****<BR><BR>";
-	$usuarios = $sql->select("Select * from tb_usuarios");
-
-	echo "----------------------------------------------------------<br><br>";
-
-	echo "***** MOSTRA USUÁRIOS *****<BR><BR>";
-	echo json_encode($usuarios);
+	// Mostra usuario
+	$root->loadById(3);
+	echo $root;
 
 ?>
