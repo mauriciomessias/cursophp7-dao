@@ -27,9 +27,24 @@
 	echo json_encode($search);
 	*/
 
+	/*
 	// EXEMPLO 4 - SÓ MOSTRA SE LOGIN E SENHA SÃO VALIDOS
 	$usuario = new Usuario(); 
 	$usuario->login("Mauricio Messias", "12345");
+	echo $usuario;
+	*/
+
+	/*
+	// EXEMPLO 5 - INSERE REGISTRO
+	$usuario = new usuario("aluno", "@lun0");
+	$usuario->insert();
+	echo $usuario;
+	*/
+
+	// EXEMPLO 6 - UPDATE REGISTRO
+	$usuario = new usuario();
+	$usuario->loadById(13);
+	$usuario->update("professor", "prof001");
 	echo $usuario;
 
 ?>
