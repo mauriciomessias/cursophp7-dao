@@ -41,10 +41,18 @@
 	echo $usuario;
 	*/
 
+	/*
 	// EXEMPLO 6 - UPDATE REGISTRO
 	$usuario = new usuario();
 	$usuario->loadById(13);
 	$usuario->update("professor", "prof001");
+	echo $usuario;
+	*/
+
+	// EXEMPLO 6 - UPDATE REGISTRO
+	$usuario = new usuario();
+	$usuario->loadById(12);
+	$usuario->delete();
 	echo $usuario;
 
 ?>
